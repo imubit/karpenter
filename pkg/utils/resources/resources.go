@@ -224,7 +224,7 @@ func Fits(candidate, total v1.ResourceList) bool {
 		}
 	}
 	for resourceName, quantity := range candidate {
-		if strings.Contains(resourceName.String(), "smarter-devices") {
+		if strings.Contains(resourceName.String(), "hugepages") {
 			continue
 		}
 		if Cmp(quantity, total[resourceName]) > 0 {
